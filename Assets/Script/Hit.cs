@@ -1,15 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Hit : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        // もしプレイヤーが他のオブジェクトに触れた場合
-        if (collision.gameObject.CompareTag("Object")) // もしくは、触れたオブジェクトが特定のタグを持っている場合
+        if (other.CompareTag("Player"))
         {
-            // ゲームオーバーシーンに移動する
+            // ゴール時の処理
             SceneManager.LoadScene("GameOver");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
