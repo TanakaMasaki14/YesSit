@@ -6,9 +6,9 @@ public class PlayerRotation : MonoBehaviour
 
     void Update()
     {
-        // 上下左右の移動を取得
-        float verticalInput = Input.GetAxis("Vertical");
-        float horizontalInput = Input.GetAxis("Horizontal");
+        // 上下左右の回転を取得
+        float verticalInput = Input.GetAxis("VerticalRotation");
+        float horizontalInput = Input.GetAxis("HorizontalRotation");
 
         // WASDキーによる回転
         float rotationY = horizontalInput * rotationSpeed * Time.deltaTime;
