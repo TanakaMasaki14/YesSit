@@ -9,15 +9,14 @@ public class SmokeSystem : MonoBehaviour
 
     ParticleSystem exhaust;
 
-
     void Start()
     {
         exhaust = GetComponent<ParticleSystem>();
     }
 
-
     void Update()
     {
-        exhaust.emissionRate = engineRevs * exhaustRate;
+        var emission = exhaust.emission;
+        emission.rateOverTime = engineRevs * exhaustRate;
     }
 }
