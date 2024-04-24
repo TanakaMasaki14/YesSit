@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 0.0f; // 移動速度
     public float deceleration = 0.0f; // 減速度
     public float fixedZ = 0.0f; // 固定するZ軸の値
-    public float rotationSpeed = 100f; // 回転速度
 
     private Vector3 velocity;
     // プレイヤーの初期位置を保存する変数
@@ -17,17 +16,8 @@ public class PlayerMovement : MonoBehaviour
         float verticalmoveInput = Input.GetAxis("VerticalMove");
         float horizontalmoveInput = Input.GetAxis("HorizontalMove");
 
-        // 上下左右の回転を取得
-        float verticalrotatitonInput = Input.GetAxis("VerticalRotation");
-        float horizontalrotationInput = Input.GetAxis("HorizontalRotation");
-
         // 移動ベクトルを計算
         Vector3 movement = new Vector3(horizontalmoveInput, verticalmoveInput, 0) * speed * Time.deltaTime;
-
-        // WASDキーによる回転
-        float rotationY = horizontalrotationInput * rotationSpeed * Time.deltaTime;
-        float rotationX = verticalrotatitonInput * rotationSpeed * Time.deltaTime;
-        transform.Rotate(rotationX, rotationY, 0);
 
         // Z軸を固定
         movement.z = 0;

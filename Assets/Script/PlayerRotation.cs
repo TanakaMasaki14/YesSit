@@ -7,12 +7,12 @@ public class PlayerRotation : MonoBehaviour
     void Update()
     {
         // è„â∫ç∂âEÇÃâÒì]ÇéÊìæ
-        float verticalInput = Input.GetAxis("VerticalRotation");
-        float horizontalInput = Input.GetAxis("HorizontalRotation");
+        float verticalrotatitonInput = Input.GetAxis("VerticalRotation");
+        float horizontalrotationInput = Input.GetAxis("HorizontalRotation");
 
         // WASDÉLÅ[Ç…ÇÊÇÈâÒì]
-        float rotationY = horizontalInput * rotationSpeed * Time.deltaTime;
-        float rotationX = verticalInput * rotationSpeed * Time.deltaTime;
+        float rotationY = horizontalrotationInput * rotationSpeed * Time.deltaTime;
+        float rotationX = verticalrotatitonInput * rotationSpeed * Time.deltaTime;
         transform.Rotate(rotationX, rotationY, 0);
     }
 }
