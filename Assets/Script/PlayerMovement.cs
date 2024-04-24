@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -33,5 +34,31 @@ public class PlayerMovement : MonoBehaviour
         Vector3 newPosition = transform.position;
         newPosition.z = fixedZ;
         transform.position = newPosition;
+    }
+
+        // プレイヤーの初期位置を保存する変数
+    private Vector3 initialPosition;
+
+    // 初期化
+    private void Start()
+    {
+        // プレイヤーの初期位置を保存
+        initialPosition = GameObject.FindGameObjectWithTag("Object").transform.position;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Object"))
+        {
+            // プレイヤーの位置を初期位置に戻す
+            other.transform.position = initialPosition;
+
+            // ゲームオーバーシーンへの遷移
+            SceneManager.LoadScene("tanaka");
+
+            // カーソルを表示し、カーソルをロック解除
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
