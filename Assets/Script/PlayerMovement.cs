@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             // プレイヤーの位置を初期位置に戻す
             other.transform.position = initialPosition;
 
-            SceneManager.LoadScene("tanaka");
+            SceneManager.LoadScene("yosida");
 
             // カーソルを表示し、カーソルをロック解除
             Cursor.visible = true;
