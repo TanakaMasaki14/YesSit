@@ -9,13 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed = 100f; // 回転速度
 
     private Vector3 velocity;
-    private Vector3 initialPosition;
-
-    void Start()
-    {
-        // プレイヤーの初期位置を保存
-        initialPosition = transform.position;
-    }
 
     void Update()
     {
@@ -51,20 +44,5 @@ public class PlayerMovement : MonoBehaviour
         Vector3 newPosition = transform.position;
         newPosition.z = fixedZ;
         transform.position = newPosition;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Object"))
-        {
-            // プレイヤーの位置を初期位置に戻す
-            other.transform.position = initialPosition;
-
-            SceneManager.LoadScene("yosida");
-
-            // カーソルを表示し、カーソルをロック解除
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
     }
 }
