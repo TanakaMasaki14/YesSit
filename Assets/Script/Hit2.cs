@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,16 +14,15 @@ public class Hit2 : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Object"))
         {
             // プレイヤーの位置を初期位置に戻す
             other.transform.position = initialPosition;
 
             SceneManager.LoadScene("Stage2");
 
-            // カーソルを表示し、カーソルをロック解除
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            var impulseSource = GetComponent<CinemachineImpulseSource>();
+            impulseSource.GenerateImpulse();
         }
     }
 }
