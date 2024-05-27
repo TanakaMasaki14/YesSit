@@ -10,6 +10,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 velocity;
 
+    public void SetVelocity(ref Vector3 vel)
+    {
+        velocity = vel;
+    }
+
     void Update()
     {
         // ã‰º¶‰E‚ÌˆÚ“®‚ğæ“¾
