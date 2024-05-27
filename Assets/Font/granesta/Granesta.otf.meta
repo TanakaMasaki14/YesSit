@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6c655bfaffbd00340bbc2e21e3a37959
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Granesta
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a38dbddb315cc854d9f3b4aed1913389, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
