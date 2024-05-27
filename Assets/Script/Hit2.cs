@@ -16,13 +16,14 @@ public class Hit2 : MonoBehaviour
     {
         if (other.CompareTag("Object"))
         {
+
+            var impulseSource = GetComponent<CinemachineImpulseSource>();
+            impulseSource.GenerateImpulse();
+
             // プレイヤーの位置を初期位置に戻す
             other.transform.position = initialPosition;
 
             SceneManager.LoadScene("Stage2");
-
-            var impulseSource = GetComponent<CinemachineImpulseSource>();
-            impulseSource.GenerateImpulse();
         }
     }
 }
