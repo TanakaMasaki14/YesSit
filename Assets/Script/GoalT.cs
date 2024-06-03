@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Goal2 : MonoBehaviour
+public class GoalT : MonoBehaviour
 {
     private Vector3 initialPosition;
     void Start()
@@ -18,7 +18,7 @@ public class Goal2 : MonoBehaviour
             // プレイヤーの位置を初期位置に戻す
             other.transform.position = initialPosition;
 
-            SceneManager.LoadScene("Stage3");
+            SceneManager.LoadScene("Stage1");
 
             // カーソルを表示し、カーソルをロック解除
             Cursor.visible = true;
