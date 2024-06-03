@@ -18,7 +18,7 @@ public class Goal2 : MonoBehaviour
             // プレイヤーの位置を初期位置に戻す
             other.transform.position = initialPosition;
 
-            SceneManager.LoadScene("Clear");
+            SceneManager.LoadScene("Stage3");
 
             // カーソルを表示し、カーソルをロック解除
             Cursor.visible = true;
