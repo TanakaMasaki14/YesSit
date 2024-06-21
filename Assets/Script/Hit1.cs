@@ -5,12 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Hit1 : MonoBehaviour
 {
-    private Vector3 initialPosition;
+    private Vector3 collisionPosition;
+    private bool isCollided = false;
 
     void Start()
     {
-        // プレイヤーの初期位置を保存
-        initialPosition = transform.position;
+        // 初期化
+        collisionPosition = transform.position;
+    }
+
+    void Update()
+    {
+        // 衝突後は位置を固定
+        if (isCollided)
+        {
+            transform.position = collisionPosition;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,8 +30,23 @@ public class Hit1 : MonoBehaviour
             var impulseSource = GetComponent<CinemachineImpulseSource>();
             impulseSource.GenerateImpulse();
 
-            // プレイヤーの位置を初期位置に戻す
-            other.transform.position = initialPosition;
+            // 衝突位置を保存
+            collisionPosition = transform.position;
+
+            // 衝突フラグを設定
+            isCollided = true;
+
+            var playerMovement = GetComponent<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.enabled = false;
+            }
+
+            var cameraFollow = GetComponent<CameraFollow>();
+            if (cameraFollow != null)
+            {
+                cameraFollow.enabled = false;
+            }
 
             // 0.8秒後にシーンをロードする
             StartCoroutine(LoadSceneAfterDelay(0.8f));
