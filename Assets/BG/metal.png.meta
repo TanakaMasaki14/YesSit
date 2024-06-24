@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/BG/metal.png.meta
 guid: fc46a8121c63bbb48b445a56837d76b6
+========
+guid: fe505edab4d2218439a8837957e61ec7
+>>>>>>>> Stashed changes:Assets/BG/metal/metal.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
