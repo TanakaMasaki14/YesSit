@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "\u30B7\u30B9\u30C6\u30E0\u30C1\u30E5\u30FC\u30C8\u30EA\u30A2\u30EB 2"
+  m_Name: PlayerFace
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 05a36375dd5bc8c44a1e0b5f1c6ca308, type: 3}
+        m_Texture: {fileID: 2800000, guid: 15e252ac718ebe94a8f1fde99665ffb6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
