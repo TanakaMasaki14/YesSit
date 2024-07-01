@@ -27,7 +27,7 @@ public class BlockDrop : MonoBehaviour
         Vector3 player = target.transform.position;
         float dis = Vector3.Distance(player, this.transform.position);
 
-        if (dis < 4f)
+        if (dis < 3f)
         {
             SphereGravity();
         }
