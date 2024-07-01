@@ -53,8 +53,8 @@ public class Goal2 : MonoBehaviour
                 goalText.gameObject.SetActive(true);
             }
 
-            // 3.5秒後にシーンをロードする
-            StartCoroutine(LoadSceneAfterDelay(3.5f));
+            // 3秒後にシーンをロードする
+            StartCoroutine(LoadSceneAfterDelay(3f));
         }
     }
 
