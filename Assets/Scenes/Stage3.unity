@@ -1936,7 +1936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4964673309513066, guid: 63f6c152afe7e434caabba2ea99448d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 199410587716961106, guid: 63f6c152afe7e434caabba2ea99448d2, type: 3}
       propertyPath: m_Materials.Array.size
