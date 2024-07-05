@@ -13,7 +13,6 @@ public class Hit2 : MonoBehaviour
         // ‰Šú‰»
         collisionPosition = transform.position;
     }
-
     void Update()
     {
         // Õ“ËŒã‚ÍˆÊ’u‚ğŒÅ’è
