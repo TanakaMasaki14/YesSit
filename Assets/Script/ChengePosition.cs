@@ -9,7 +9,7 @@ public class ChengePosition : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Portal"))
+        if (other.CompareTag("Player"))
         {
             player.transform.position = nextPortal.transform.position;
         }
