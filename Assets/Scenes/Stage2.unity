@@ -23591,6 +23591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb99513af2438540a79a72f29352b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goalSound: {fileID: 8300000, guid: 3ae7a98e39a68fc4381e4d8ca70bd5bd, type: 3}
   goalText: {fileID: 1478593041}
 --- !u!54 &2022097011
 Rigidbody:

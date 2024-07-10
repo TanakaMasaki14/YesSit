@@ -1,28 +1,72 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GoalT : MonoBehaviour
 {
-    private Vector3 initialPosition;
+    private Vector3 collisionPosition;
+    private bool isCollided = false;
+    public AudioClip goalSound;
+    private AudioSource audioSource;
+
+    // 画面中央に表示するテキスト
+    public Text goalText;
+
     void Start()
     {
-        // プレイヤーの初期位置を保存
-        initialPosition = transform.position;
+        // 初期化
+        collisionPosition = transform.position;
+        // テキストを非表示に設定
+        if (goalText != null)
+        {
+            goalText.gameObject.SetActive(false);
+        }
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = goalSound;
     }
+
+    void Update()
+    {
+        // 衝突後は位置を固定
+        if (isCollided)
+        {
+            transform.position = collisionPosition;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Goal"))
         {
-            // プレイヤーの位置を初期位置に戻す
-            other.transform.position = initialPosition;
+            // 衝突位置を保存
+            collisionPosition = transform.position;
 
-            SceneManager.LoadScene("Stage1");
+            // 衝突フラグを設定
+            isCollided = true;
 
-            // カーソルを表示し、カーソルをロック解除
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            var playerMovement = GetComponent<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.enabled = false;
+            }
+
+            // テキストを表示
+            if (goalText != null)
+            {
+                goalText.gameObject.SetActive(true);
+            }
+
+            audioSource.Play();
+
+            // 3秒後にシーンをロードする
+            StartCoroutine(LoadSceneAfterDelay(3f));
         }
+    }
+
+    private IEnumerator LoadSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("Stage1");
     }
 }
