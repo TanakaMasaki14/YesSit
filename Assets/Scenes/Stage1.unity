@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 71620578}
   m_Layer: 0
   m_Name: flash
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5303,7 +5303,7 @@ GameObject:
   - component: {fileID: 165705737}
   m_Layer: 0
   m_Name: lazer
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20629,7 +20629,7 @@ GameObject:
   - component: {fileID: 627374262}
   m_Layer: 0
   m_Name: spark_tip
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35321,7 +35321,7 @@ GameObject:
   - component: {fileID: 701621072}
   m_Layer: 0
   m_Name: flash_tip
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40347,7 +40347,7 @@ GameObject:
   - component: {fileID: 741555633}
   m_Layer: 0
   m_Name: flash2_tip
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46118,7 +46118,7 @@ GameObject:
   - component: {fileID: 1197450556}
   m_Layer: 0
   m_Name: lazershooting
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52338,7 +52338,7 @@ GameObject:
   - component: {fileID: 1843169429}
   m_Layer: 0
   m_Name: flash2
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57403,7 +57403,7 @@ GameObject:
   - component: {fileID: 1887843357}
   m_Layer: 0
   m_Name: spark
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
