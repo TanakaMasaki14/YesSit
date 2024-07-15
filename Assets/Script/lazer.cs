@@ -11,6 +11,8 @@ public class lazer : MonoBehaviour
     public Image redFlashImage; // 赤いフラッシュ用のUI Image
     private Vector3 collisionPosition;
     private bool isCollided = false;
+    public GameObject face1;
+    public GameObject face2;
 
     void Start()
     {
@@ -29,6 +31,9 @@ public class lazer : MonoBehaviour
             color.a = 0;
             redFlashImage.color = color;
         }
+
+        face1.SetActive(true);
+        face2.SetActive(false);
     }
 
     void Update()
@@ -37,6 +42,9 @@ public class lazer : MonoBehaviour
         if (isCollided)
         {
             transform.position = collisionPosition;
+
+            face1.SetActive(false);
+            face2.SetActive(true);
         }
     }
 
