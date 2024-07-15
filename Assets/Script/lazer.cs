@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class lazer : MonoBehaviour
 {
     public ParticleSystem particleEffect; // パーティクルエフェクトの参照
+    public Image redFlashImage; // 赤いフラッシュ用のUI Image
     private Vector3 collisionPosition;
     private bool isCollided = false;
 
@@ -19,9 +21,13 @@ public class lazer : MonoBehaviour
         {
             particleEffect.Play();
         }
-        else
+
+        // 赤いフラッシュ用のImageを非表示にする
+        if (redFlashImage != null)
         {
-            Debug.LogError("Particle effect not assigned.");
+            var color = redFlashImage.color;
+            color.a = 0;
+            redFlashImage.color = color;
         }
     }
 
@@ -38,16 +44,6 @@ public class lazer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            var impulseSource = GetComponent<CinemachineImpulseSource>();
-            if (impulseSource != null)
-            {
-                impulseSource.GenerateImpulse();
-            }
-            else
-            {
-                Debug.LogError("CinemachineImpulseSource component not found.");
-            }
-
             // 衝突位置を保存
             collisionPosition = transform.position;
 
@@ -59,23 +55,43 @@ public class lazer : MonoBehaviour
             {
                 playerMovement.enabled = false;
             }
-            else
-            {
-                Debug.LogError("PlayerMovement component not found on player object.");
-            }
 
-            var cameraFollow = other.GetComponent<CameraFollow>();
-            if (cameraFollow != null)
+            // 赤いフラッシュを開始
+            if (redFlashImage != null)
             {
-                cameraFollow.enabled = false;
-            }
-            else
-            {
-                Debug.LogError("CameraFollow component not found on player object.");
+                StartCoroutine(FlashRed());
             }
 
             // 0.8秒後にシーンをロードする
             StartCoroutine(LoadSceneAfterDelay(0.8f));
+        }
+    }
+
+    private IEnumerator FlashRed()
+    {
+        var color = redFlashImage.color;
+
+        // フラッシュを表示
+        for (int i = 0; i < 3; i++) // 点滅回数
+        {
+            // フェードイン
+            for (float t = 0; t <= 1; t += Time.deltaTime / 0.1f) // 0.1秒でフェードイン
+            {
+                color.a = Mathf.Lerp(0, 1, t);
+                color.r = 1.0f; // 赤色を最大に設定
+                color.g = 0.0f; // 緑色を最小に設定
+                color.b = 0.0f; // 青色を最小に設定
+                redFlashImage.color = color;
+                yield return null;
+            }
+
+            // フェードアウト
+            for (float t = 0; t <= 1; t += Time.deltaTime / 0.1f) // 0.1秒でフェードアウト
+            {
+                color.a = Mathf.Lerp(1, 0, t);
+                redFlashImage.color = color;
+                yield return null;
+            }
         }
     }
 
