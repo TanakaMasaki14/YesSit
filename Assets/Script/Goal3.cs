@@ -1,22 +1,31 @@
-using Cinemachine;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class Hit3 : MonoBehaviour
+public class Goal3 : MonoBehaviour
 {
     private Vector3 collisionPosition;
     private bool isCollided = false;
-    public AudioClip hitSound;
+    public AudioClip goalSound;
     private AudioSource audioSource;
+
+    // 画面中央に表示するテキスト
+    public Text goalText;
 
     void Start()
     {
         // 初期化
         collisionPosition = transform.position;
+        // テキストを非表示に設定
+        if (goalText != null)
+        {
+            goalText.gameObject.SetActive(false);
+        }
         audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = hitSound;
+        audioSource.clip = goalSound;
     }
+
     void Update()
     {
         // 衝突後は位置を固定
@@ -28,11 +37,8 @@ public class Hit3 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Object"))
+        if (other.CompareTag("Goal"))
         {
-            var impulseSource = GetComponent<CinemachineImpulseSource>();
-            impulseSource.GenerateImpulse();
-
             // 衝突位置を保存
             collisionPosition = transform.position;
 
@@ -45,22 +51,22 @@ public class Hit3 : MonoBehaviour
                 playerMovement.enabled = false;
             }
 
-            var cameraFollow = GetComponent<CameraFollow>();
-            if (cameraFollow != null)
+            // テキストを表示
+            if (goalText != null)
             {
-                cameraFollow.enabled = false;
+                goalText.gameObject.SetActive(true);
             }
 
             audioSource.Play();
 
-            // 0.8秒後にシーンをロードする
-            StartCoroutine(LoadSceneAfterDelay(0.8f));
+            // 3秒後にシーンをロードする
+            StartCoroutine(LoadSceneAfterDelay(3f));
         }
     }
 
     private IEnumerator LoadSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Stage3");
+        SceneManager.LoadScene("Stage4");
     }
 }
