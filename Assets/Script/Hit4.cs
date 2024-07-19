@@ -8,11 +8,15 @@ public class Hit4 : MonoBehaviour
 {
     private Vector3 collisionPosition;
     private bool isCollided = false;
+    public GameObject face1;
+    public GameObject face2;
 
     void Start()
     {
         // èâä˙âª
         collisionPosition = transform.position;
+        face1.SetActive(true);
+        face2.SetActive(false);
     }
 
     void Update()
@@ -21,6 +25,8 @@ public class Hit4 : MonoBehaviour
         if (isCollided)
         {
             transform.position = collisionPosition;
+            face1.SetActive(false);
+            face2.SetActive(true);
         }
     }
 
