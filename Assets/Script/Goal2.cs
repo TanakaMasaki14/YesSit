@@ -67,6 +67,6 @@ public class Goal2 : MonoBehaviour
     private IEnumerator LoadSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Stage3");
     }
 }
