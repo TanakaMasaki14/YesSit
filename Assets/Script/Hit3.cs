@@ -9,6 +9,8 @@ public class Hit3 : MonoBehaviour
     private bool isCollided = false;
     public AudioClip hitSound;
     private AudioSource audioSource;
+    public GameObject face1;
+    public GameObject face2;
 
     void Start()
     {
@@ -16,6 +18,8 @@ public class Hit3 : MonoBehaviour
         collisionPosition = transform.position;
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = hitSound;
+        face1.SetActive(true);
+        face2.SetActive(false);
     }
     void Update()
     {
@@ -23,6 +27,8 @@ public class Hit3 : MonoBehaviour
         if (isCollided)
         {
             transform.position = collisionPosition;
+            face1.SetActive(false);
+            face2.SetActive(true);
         }
     }
 
