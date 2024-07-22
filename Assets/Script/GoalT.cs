@@ -9,6 +9,7 @@ public class GoalT : MonoBehaviour
     private bool isCollided = false;
     public AudioClip goalSound;
     private AudioSource audioSource;
+    public int StageNum;
 
     // 画面中央に表示するテキスト
     public Text goalText;
@@ -67,6 +68,13 @@ public class GoalT : MonoBehaviour
     private IEnumerator LoadSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Clear");
+        if(StageNum == 0)
+        {
+            SceneManager.LoadScene("Stage1");
+        }
+        if (StageNum == 4)
+        {
+            SceneManager.LoadScene("Clear");
+        }
     }
 }

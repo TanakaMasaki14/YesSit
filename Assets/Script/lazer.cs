@@ -13,6 +13,7 @@ public class lazer : MonoBehaviour
     private bool isCollided = false;
     public GameObject face1;
     public GameObject face2;
+    public int StageNum;
 
     void Start()
     {
@@ -106,6 +107,21 @@ public class lazer : MonoBehaviour
     private IEnumerator LoadSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Stage1");
+        if (StageNum == 1)
+        {
+            SceneManager.LoadScene("Stage1");
+        }
+        if (StageNum == 2)
+        {
+            SceneManager.LoadScene("Stage2");
+        }
+        if (StageNum == 3)
+        {
+            SceneManager.LoadScene("Stage3");
+        }
+        if (StageNum == 4)
+        {
+            SceneManager.LoadScene("Stage4");
+        }
     }
 }
