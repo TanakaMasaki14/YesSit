@@ -8,6 +8,8 @@ public class Hit4 : MonoBehaviour
 {
     private Vector3 collisionPosition;
     private bool isCollided = false;
+    public AudioClip hitSound;
+    private AudioSource audioSource;
     public GameObject face1;
     public GameObject face2;
 
@@ -15,6 +17,8 @@ public class Hit4 : MonoBehaviour
     {
         // 初期化
         collisionPosition = transform.position;
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = hitSound;
         face1.SetActive(true);
         face2.SetActive(false);
     }
@@ -54,6 +58,8 @@ public class Hit4 : MonoBehaviour
             {
                 cameraFollow.enabled = false;
             }
+            //音楽の再生
+            audioSource.Play();
 
             // 0.8秒後にシーンをロードする
             StartCoroutine(LoadSceneAfterDelay(0.8f));
