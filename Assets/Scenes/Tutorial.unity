@@ -244,6 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: 274380a289105e649a3931f4779d63c0, type: 3}
+  Face1: {fileID: 347798584}
+  Face2: {fileID: 1297476837}
 --- !u!114 &74170537
 MonoBehaviour:
   m_ObjectHideFlags: 0
