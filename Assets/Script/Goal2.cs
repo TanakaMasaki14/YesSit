@@ -7,6 +7,8 @@ public class Goal2 : MonoBehaviour
 {
     private Vector3 collisionPosition;
     private bool isCollided = false;
+    public AudioClip goalSound;
+    private AudioSource audioSource;
 
     // 画面中央に表示するテキスト
     public Text goalText;
@@ -20,6 +22,8 @@ public class Goal2 : MonoBehaviour
         {
             goalText.gameObject.SetActive(false);
         }
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = goalSound;
     }
 
     void Update()
@@ -53,6 +57,8 @@ public class Goal2 : MonoBehaviour
                 goalText.gameObject.SetActive(true);
             }
 
+            audioSource.Play();
+
             // 3秒後にシーンをロードする
             StartCoroutine(LoadSceneAfterDelay(3f));
         }
@@ -61,6 +67,6 @@ public class Goal2 : MonoBehaviour
     private IEnumerator LoadSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Stage3");
     }
 }

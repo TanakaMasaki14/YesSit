@@ -7,19 +7,28 @@ public class Hit1 : MonoBehaviour
 {
     private Vector3 collisionPosition;
     private bool isCollided = false;
+    public AudioClip hitSound;
+    private AudioSource audioSource;
+    public GameObject face1;
+    public GameObject face2;
 
     void Start()
     {
         // 初期化
         collisionPosition = transform.position;
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = hitSound;
+        face1.SetActive(true);
+        face2.SetActive(false);
     }
-
     void Update()
     {
         // 衝突後は位置を固定
         if (isCollided)
         {
             transform.position = collisionPosition;
+            face1.SetActive(false);
+            face2.SetActive(true);
         }
     }
 
@@ -47,6 +56,8 @@ public class Hit1 : MonoBehaviour
             {
                 cameraFollow.enabled = false;
             }
+
+            audioSource.Play();
 
             // 0.8秒後にシーンをロードする
             StartCoroutine(LoadSceneAfterDelay(0.8f));

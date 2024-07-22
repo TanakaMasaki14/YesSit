@@ -7,11 +7,19 @@ public class HitT : MonoBehaviour
 {
     private Vector3 collisionPosition;
     private bool isCollided = false;
+    public AudioClip hitSound;
+    private AudioSource audioSource;
+    public GameObject Face1;
+    public GameObject Face2;
 
     void Start()
     {
         // 初期化
         collisionPosition = transform.position;
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = hitSound;
+        Face1.SetActive(true);
+        Face2.SetActive(false);
     }
 
     void Update()
@@ -19,6 +27,8 @@ public class HitT : MonoBehaviour
         // 衝突後は位置を固定
         if (isCollided)
         {
+            Face1.SetActive(false);
+            Face2.SetActive(true);
             transform.position = collisionPosition;
         }
     }
@@ -47,6 +57,8 @@ public class HitT : MonoBehaviour
             {
                 cameraFollow.enabled = false;
             }
+
+            audioSource.Play();
 
             // 0.8秒後にシーンをロードする
             StartCoroutine(LoadSceneAfterDelay(0.8f));
