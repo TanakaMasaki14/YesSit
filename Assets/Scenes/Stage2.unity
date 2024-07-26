@@ -8452,7 +8452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1303321117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8466,7 +8466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: f1c04b329fe3fb24dac75fc8b0e83678, type: 2}
-  portal: {fileID: 0}
+  portal: {fileID: 537247253}
 --- !u!81 &1303321118
 AudioListener:
   m_ObjectHideFlags: 0

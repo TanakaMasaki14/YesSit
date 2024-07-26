@@ -12,6 +12,8 @@ public class Hit1 : MonoBehaviour
     public GameObject face1;
     public GameObject face2;
 
+    public GameObject collisionUI; // UI要素をアサインするための変数
+
     void Start()
     {
         // 初期化
@@ -29,6 +31,8 @@ public class Hit1 : MonoBehaviour
             transform.position = collisionPosition;
             face1.SetActive(false);
             face2.SetActive(true);
+
+           
         }
     }
 
@@ -58,6 +62,10 @@ public class Hit1 : MonoBehaviour
             }
 
             audioSource.Play();
+
+
+            collisionUI.SetActive(false);
+            
 
             // 0.8秒後にシーンをロードする
             StartCoroutine(LoadSceneAfterDelay(0.8f));

@@ -10207,7 +10207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &165705734
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -20097,7 +20097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &391109936
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25429,6 +25429,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 274380a289105e649a3931f4779d63c0, type: 3}
   face1: {fileID: 1764376457}
   face2: {fileID: 138543112}
+  collisionUI: {fileID: 1377317798}
 --- !u!114 &567257072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60838,7 +60839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1197450556
 SphereCollider:
   m_ObjectHideFlags: 0
