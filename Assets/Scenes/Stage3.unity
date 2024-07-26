@@ -6173,7 +6173,7 @@ MonoBehaviour:
   rotateX: 0
   rotateY: 0
   rotateZ: 0
-  moveTime: 2.5
+  moveTime: 2
   type: 1
   num: 3
 --- !u!65 &442904085
@@ -6371,7 +6371,7 @@ MonoBehaviour:
   rotateX: 0
   rotateY: 0
   rotateZ: 0
-  moveTime: 2.5
+  moveTime: 2
   type: 1
   num: 3
 --- !u!65 &445420181
@@ -12153,11 +12153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.97
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.76
+      value: 0.721
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39542,7 +39542,7 @@ MonoBehaviour:
   rotateX: 0
   rotateY: 0
   rotateZ: 0
-  moveTime: 2.5
+  moveTime: 2
   type: 1
   num: 3
 --- !u!65 &1682429313
