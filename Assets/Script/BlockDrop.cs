@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BlockDrop : MonoBehaviour
 {
+    Animator animator;
+    float animSpeed = 3f;
     public GameObject target;
     private Vector3 initialPosition;
     private Rigidbody rb;
@@ -12,6 +14,7 @@ public class BlockDrop : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         // ‰ŠúˆÊ’u‚ğ‹L˜^
         initialPosition = transform.position;
         rb = GetComponent<Rigidbody>();
@@ -29,6 +32,8 @@ public class BlockDrop : MonoBehaviour
 
         if (dis < 3f)
         {
+            animSpeed -= 1.2f;
+            animator.SetFloat("Speed", animSpeed);
             SphereGravity();
         }
     }
@@ -57,6 +62,8 @@ public class BlockDrop : MonoBehaviour
 
         while (elapsedTime < duration)
         {
+            animSpeed += 2.5f;
+            animator.SetFloat("Speed", animSpeed);
             transform.position = Vector3.Lerp(startPosition, initialPosition, elapsedTime / duration);
             elapsedTime += Time.deltaTime;
             yield return null;
