@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 440057790}
   - component: {fileID: 440057789}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2126,7 +2126,7 @@ GameObject:
   - component: {fileID: 1791490754}
   - component: {fileID: 1791490753}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
