@@ -255,6 +255,7 @@ MonoBehaviour:
   rotateZ: 0
   moveTime: 3
   type: 0
+  num: 0
 --- !u!65 &14913283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10524,6 +10525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a912941633cdc498e43694ab6777a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goalSound: {fileID: 0}
+  goalText: {fileID: 0}
 --- !u!65 &497906638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10637,6 +10640,7 @@ MonoBehaviour:
   rotateZ: 20
   moveTime: 2
   type: 1
+  num: 0
 --- !u!65 &538671820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10750,6 +10754,7 @@ MonoBehaviour:
   rotateZ: 0
   moveTime: 3
   type: 0
+  num: 0
 --- !u!65 &637556185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10886,6 +10891,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae2b85b916820f4b87271b186e41308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSound: {fileID: 0}
+  face1: {fileID: 0}
+  face2: {fileID: 0}
+  collisionUI: {fileID: 0}
 --- !u!65 &652411487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11279,6 +11288,7 @@ MonoBehaviour:
   rotateZ: 0
   moveTime: 3
   type: 0
+  num: 0
 --- !u!65 &889468434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11393,6 +11403,7 @@ MonoBehaviour:
   rotateZ: 20
   moveTime: 2
   type: 1
+  num: 0
 --- !u!65 &921731243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11506,6 +11517,7 @@ MonoBehaviour:
   rotateZ: 20
   moveTime: 2
   type: 1
+  num: 0
 --- !u!65 &970400012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21762,6 +21774,7 @@ MonoBehaviour:
   rotateZ: 0
   moveTime: 3
   type: 0
+  num: 0
 --- !u!65 &1513997401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27676,6 +27689,7 @@ MonoBehaviour:
   rotateZ: 0
   moveTime: 3
   type: 0
+  num: 0
 --- !u!65 &2140938802
 BoxCollider:
   m_ObjectHideFlags: 0
