@@ -32,7 +32,7 @@ public class BlockDrop : MonoBehaviour
 
         if (dis < 3f)
         {
-            animSpeed -= 1.2f;
+            animSpeed -= 2.5f;
             animator.SetFloat("Speed", animSpeed);
             SphereGravity();
         }
