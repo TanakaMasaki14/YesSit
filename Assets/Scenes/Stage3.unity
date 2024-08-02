@@ -12956,7 +12956,7 @@ MonoBehaviour:
   speed: 5
   deceleration: 0.1
   fixedZ: 0
-  rotationSpeed: 100
+  rotationSpeed: 300
 --- !u!1 &717241070
 GameObject:
   m_ObjectHideFlags: 0
