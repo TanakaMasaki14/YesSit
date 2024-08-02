@@ -23,10 +23,15 @@ Material:
         m_Texture: {fileID: 2800000, guid: 8aeec07265fb848449c990a18992af0d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SubTex:
+        m_Texture: {fileID: 2800000, guid: bd2a41c9fbd2d9049ab839687514d276, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _FlickeringSpeed: 1000
-    - _FlickeringStrength: 0.1
-    - _OpacityNoise: 0
+    - _FlickeringSpeed: 500
+    - _FlickeringStrength: 0
+    - _OpacityFace: 0
+    - _OpacityNoise: 0.35
     - _OpacityScanLine: 1.6
     m_Colors: []
   m_BuildTextureStacks: []
