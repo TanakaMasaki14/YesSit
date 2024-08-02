@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.83
+      value: 6.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -666,7 +666,7 @@ MonoBehaviour:
   rotateX: 0
   rotateY: 0
   rotateZ: 0
-  moveTime: 2
+  moveTime: 2.5
   type: 1
   num: 2
 --- !u!95 &127082928
@@ -12153,11 +12153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22
+      value: 2.79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.721
+      value: 6.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38608,11 +38608,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb31545b44cba4da5b719c23489c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateX: 1
+  rotateX: 0
   rotateY: 1
   rotateZ: 0
   moveTime: 2
-  type: 0
+  type: 1
   num: 2
 --- !u!95 &1311999222
 Animator:
