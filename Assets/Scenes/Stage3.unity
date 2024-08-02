@@ -12575,11 +12575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.52
+      value: 20.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.88
+      value: 18.77
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -40812,7 +40812,6 @@ GameObject:
   - component: {fileID: 1695073622}
   - component: {fileID: 1695073621}
   - component: {fileID: 1695073620}
-  - component: {fileID: 1695073619}
   m_Layer: 0
   m_Name: Cube (35)
   m_TagString: Object
@@ -40820,24 +40819,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1695073619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695073618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1bb31545b44cba4da5b719c23489c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateX: 0
-  rotateY: 0
-  rotateZ: 0
-  moveTime: 2.5
-  type: 1
-  num: 3
 --- !u!65 &1695073620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52085,7 +52066,6 @@ GameObject:
   - component: {fileID: 1983131621}
   - component: {fileID: 1983131620}
   - component: {fileID: 1983131619}
-  - component: {fileID: 1983131618}
   m_Layer: 0
   m_Name: Cube (34)
   m_TagString: Object
@@ -52093,24 +52073,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1983131618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983131617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1bb31545b44cba4da5b719c23489c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateX: 0
-  rotateY: 0
-  rotateZ: 0
-  moveTime: 2.5
-  type: 1
-  num: 3
 --- !u!65 &1983131619
 BoxCollider:
   m_ObjectHideFlags: 0
