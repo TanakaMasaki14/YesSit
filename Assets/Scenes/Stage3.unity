@@ -171,7 +171,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6, z: 1}
+  m_Size: {x: 0.82, y: 1.54, z: 0.74}
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!54 &9598388
 Rigidbody:
@@ -785,7 +785,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6, z: 1}
+  m_Size: {x: 0.82, y: 1.54, z: 0.74}
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!54 &127082930
 Rigidbody:
@@ -6490,7 +6490,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6, z: 1}
+  m_Size: {x: 0.82, y: 1.54, z: 0.74}
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!54 &444053281
 Rigidbody:
@@ -6693,7 +6693,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6, z: 1}
+  m_Size: {x: 0.82, y: 1.54, z: 0.74}
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!54 &449491158
 Rigidbody:
@@ -18200,7 +18200,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6, z: 1}
+  m_Size: {x: 0.82, y: 1.54, z: 0.74}
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!54 &790852018
 Rigidbody:
@@ -39557,7 +39557,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6, z: 1}
+  m_Size: {x: 0.82, y: 1.54, z: 0.74}
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!54 &1311999224
 Rigidbody:
@@ -46807,7 +46807,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6, z: 1}
+  m_Size: {x: 0.82, y: 1.54, z: 0.74}
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!54 &1936379754
 Rigidbody:
@@ -52300,7 +52300,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6, z: 1}
+  m_Size: {x: 0.82, y: 1.54, z: 0.74}
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!54 &2040282427
 Rigidbody:
@@ -62336,7 +62336,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6, z: 1}
+  m_Size: {x: 0.82, y: 1.54, z: 0.74}
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!95 &2136202127
 Animator:
