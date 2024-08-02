@@ -49,10 +49,10 @@ Shader "Unlit/VHS"
             half _OpacityScanLine;
             half _OpacityNoise;
             half _FlickeringSpeed;
-            half _FlickeringStrength; 
+            half _FlickeringStrength;
 
             fixed4 frag (v2f i) : SV_Target
-            {
+            {   
                 fixed4 img = tex2D(_MainTex, i.uv);
                 float3 col = float3(0, 0, 0);
                 float s = sin(i.uv.y * 1000);
