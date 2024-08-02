@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3126cad6c90d79b41ad396fd46386d01, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.83
+      value: 6.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -418,8 +418,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96198917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14, y: 4.5, z: 0}
-  m_LocalScale: {x: 23, y: 1, z: 1}
+  m_LocalPosition: {x: 14.53, y: 4.5, z: 0}
+  m_LocalScale: {x: 21, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -666,7 +666,7 @@ MonoBehaviour:
   rotateX: 0
   rotateY: 0
   rotateZ: 0
-  moveTime: 2
+  moveTime: 2.5
   type: 1
   num: 2
 --- !u!95 &127082928
@@ -5633,6 +5633,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
       propertyPath: m_Name
       value: Drone (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
       propertyPath: m_TagString
@@ -12153,11 +12157,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22
+      value: 22.52
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.721
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 772d207a65d673d4eb7ac9dfa51a93da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38608,12 +38612,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb31545b44cba4da5b719c23489c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateX: 1
-  rotateY: 1
+  rotateX: 0
+  rotateY: 0
   rotateZ: 0
   moveTime: 2
-  type: 0
-  num: 2
+  type: 1
+  num: 1
 --- !u!95 &1311999222
 Animator:
   serializedVersion: 3
@@ -50934,6 +50938,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
       propertyPath: m_Name
       value: Drone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1c09d368837afaa48bd950380fca75b3, type: 3}
       propertyPath: m_TagString
